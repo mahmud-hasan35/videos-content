@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .active {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="w-11/12 mx-auto flex justify-between items-center border-b-2 py-4">
+            <div>
+                <img width="[120px]" src="assets/Logo.png" alt="">
+            </div>
+            <div>
+                <button class="btn hidden md:block">Sort by view</button>
+            </div>
+            <div>
+                <button class="py-2 px-6 bg-red-800 text-white">Blog</button>
+            </div>
+        </nav>
+    </header>
+
+    <nav id="category-container" class="flex justify-center items-center py-6 gap-5">
+        <button id="btn-all" onclick="videoCategory()" class=" btn btn-sm hover:bg-red-700 hover:text-white">All</button>
+     
+    </nav>
+
+    <section id="video-container" class="w-11/12 mx-auto mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="card bg-base-100  shadow-xl">
+            <figure class="relative">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Z7Xirb8BOdY?si=W6ktEBy3fWcjqk0b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <span class=" bottom-2 right-2 absolute bg-black text-white px-3 text-sm rounded ">3hrs 56 min ago</span>
+            </figure>
+            <div class=" py-6 flex gap-3 px-1">
+                <div>
+                    <div class="avatar">
+                        <div class=" ring-primary ring-offset-base-100 w-7 h-7 rounded-full ring ring-offset-2">
+                          <img class="" src="assets/WhatsApp Image 2025-03-10 at 00.48.36_6bf69100.jpg" />
+                        </div>
+                      </div>
+                </div>
+                <div>
+                    <h2 class="font-bold">Videos</h2>
+                    <p class=" text-gray-500 flex gap-1 py-1 text-sm">Mahmud Hasan
+                    <img class="w-6 h-6" src="https://img.icons8.com/?size=96&id=SRJUuaAShjVD&format=png" alt=""></p>
+                    <p class="text-sm text-gray-400">100k</p>
+                </div>
+         
+            </div>
+          </div>
+        <div class="card bg-base-100  shadow-xl">
+            <figure class="relative">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/HsEIKQ5nbuI?si=6enlHsdF0HlfAfPu"
+                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <span class=" bottom-2 right-2 absolute bg-black text-white px-3 text-sm rounded ">3hrs 56 min ago</span>
+            </figure>
+            <div class=" py-6 flex gap-3 px-1">
+                <div>
+                    <div class="avatar">
+                        <div class=" ring-primary ring-offset-base-100 w-7 h-7 rounded-full ring ring-offset-2">
+                          <img class="" src="assets/WhatsApp Image 2025-03-10 at 00.48.36_6bf69100.jpg" />
+                        </div>
+                      </div>
+                </div>
+                <div>
+                    <h2 class="font-bold">Videos</h2>
+                    <p class=" text-gray-500 flex gap-1 py-1 text-sm">Mahmud Hasan
+                    <img class="w-6 h-6" src="https://img.icons8.com/?size=96&id=SRJUuaAShjVD&format=png" alt=""></p>
+                    <p class="text-sm text-gray-400">100k</p>
+                </div>
+         
+            </div>
+          </div>
+        <div class="card bg-base-100  shadow-xl">
+            <figure class="relative">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/cNMyUl0xwEI?si=7DilHydQ6yOl_0uv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <span class=" bottom-2 right-2 absolute bg-black text-white px-3 text-sm rounded ">3hrs 56 min ago</span>
+            </figure>
+            <div class=" py-6 flex gap-3 px-1">
+                <div>
+                    <div class="avatar">
+                        <div class=" ring-primary ring-offset-base-100 w-7 h-7 rounded-full ring ring-offset-2">
+                          <img class="" src="assets/WhatsApp Image 2025-03-10 at 00.48.36_6bf69100.jpg" />
+                        </div>
+                      </div>
+                </div>
+                <div>
+                    <h2 class="font-bold">Videos</h2>
+                    <p class=" text-gray-500 flex gap-1 py-1 text-sm">Mahmud Hasan
+                    <img class="w-6 h-6" src="https://img.icons8.com/?size=96&id=SRJUuaAShjVD&format=png" alt=""></p>
+                    <p class="text-sm text-gray-400">100k</p>
+                </div>
+         
+            </div>
+          </div>
+        <div class="card bg-base-100  shadow-xl">
+            <figure class="relative">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9L9gH555Fa8?si=-WzyO1HOUBrSOXMT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <span class=" bottom-2 right-2 absolute bg-black text-white px-3 text-sm rounded ">3hrs 56 min ago</span>
+            </figure>
+            <div class=" py-6 flex gap-3 px-1">
+                <div>
+                    <div class="avatar">
+                        <div class=" ring-primary ring-offset-base-100 w-7 h-7 rounded-full ring ring-offset-2">
+                          <img class="" src="assets/WhatsApp Image 2025-03-10 at 00.48.36_6bf69100.jpg" />
+                        </div>
+                      </div>
+                </div>
+                <div>
+                    <h2 class="font-bold">Videos</h2>
+                    <p class=" text-gray-500 flex gap-1 py-1 text-sm">Mahmud Hasan
+                    <img class="w-6 h-6" src="https://img.icons8.com/?size=96&id=SRJUuaAShjVD&format=png" alt=""></p>
+                    <p class="text-sm text-gray-400">100k</p>
+                </div>
+         
+            </div>
+          </div>
+  
+        <div class="col-span-full text-center flex justify-center flex-col items-center py-5">
+            <img src="assets/Icon.png" alt="">
+            <h2 class="text-3xl font-bold">Oops!! Sorry, There is no content here</h2>
+        </div>
+
+    </section>
+    <script src="script/index.js"></script>
+</body>
+</html>
