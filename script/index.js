@@ -1,3 +1,14 @@
+
+const shadowLoader = () => {
+    document.getElementById('loading').classList.remove('hidden')
+    document.getElementById('video-container').classList.add('hidden')
+}
+const hideLoader = () => {
+    document.getElementById('loading').classList.add('hidden')
+    document.getElementById('video-container').classList.remove('hidden')
+}
+
+
 function removeBtn () {
     const remove = document.getElementsByClassName('active')
     for(let btn of remove){
@@ -6,16 +17,17 @@ function removeBtn () {
     }
 }
 function loadCategorys () {
+   
     fetch('https://openapi.programming-hero.com/api/phero-tube/categories')
     .then(res => res.json()
     .then(data => showCategories(data.categories)
     )
     )
+   
 }
 
 function showCategories(categories) {
     for (cat of categories) {
-       
         const categoryId = document.getElementById('category-container')
         const categoryDiv = document.createElement('div')
        
@@ -28,6 +40,7 @@ function showCategories(categories) {
 }
 
 function videoCategory (searchText = "") {
+   shadowLoader()
     fetch(`https://openapi.programming-hero.com/api/phero-tube/videos?title=${searchText}`)
     .then(res => res.json())
     .then(data => {
@@ -36,9 +49,11 @@ function videoCategory (searchText = "") {
         displayVideo(data.videos)
     } 
     )
+
 }
 const videoMusic = (id) => {
     const url = `https://openapi.programming-hero.com/api/phero-tube/category/${id}`
+    shadowLoader()
     fetch(url)
     .then(res => res.json())
     .then(data => {
@@ -79,6 +94,7 @@ const videoMusic = (id) => {
 const displayVideo = (videos) => {
     const videoContainer = document.getElementById('video-container')
         videoContainer.innerHTML = "";
+        hideLoader()
         if(videos.length === 0) {
             videoContainer.innerHTML = `
                     <div class="card bg-base-100  shadow-xl">
@@ -214,8 +230,10 @@ const displayVideo = (videos) => {
           </div>
         `
         videoContainer.append(videoDiv);
-        
+      
     });
+   hideLoader()
+  
 }
 
 document.getElementById('search-input')
